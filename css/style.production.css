@@ -248,7 +248,7 @@ body {
       fill: #edc655;
     }
     50% {
-      fill: var(sun-50);
+      fill: var(--sun-50);
     }
     100% {
       fill: #f76414;
@@ -259,7 +259,7 @@ body {
       fill: #edc655;
     }
     50% {
-      fill: var(sun-50);
+      fill: var(--sun-50);
     }
     100% {
       fill: #f76414;
