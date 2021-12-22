@@ -10,353 +10,340 @@ Colors used
 
 Background color (Gold): #FFD700;
 text color (Black): #000;
-Primary color (Green): #00675c;
+Primary color (Green): #769892;
 Secondary color (Orange): #e0b354;
 */
+:root {
+  --primary-color: #c30000;
+  --secondary-color: #e0b354;
+  --background: #ffd700;
+  --link-visited: purple;
+  --link-active: #ff5858;
+  --button-background: #769892;
+  --button-text: #2b2b2b;
+  --grid-background: lightgray;
+  --sun-0: #fcffad;
+  --sun-50: #edc655;
+  --sun-100: #f76414;
+  --nav-animation-color: rgb(2, 0, 0);
+  --header-font-weight: 700;
+}
 body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    /* Sets the font size to 16 px */
-    line-height: 1.6;
-    /* Sets the line-height to 1.6 */
-    background-color: #ffd700;
-  }
-  h1{
-    font-size: 30px;
-    font-weight: 700;
-  }
-  h2{
-    font-size: 24px;
-    font-weight: 700;
-  }
-  h3{
-    font-size: 18px;
-    font-weight: 700;
-  }
-  a {
-    color: #c30000;
-  }
-  a:visited {
-    /* visited link */
-    color: purple;
-  }
-  a:hover, a:focus {
-    /* No underlining when hovering over a link */
-    text-decoration: none;
-  }
-  a:active {
-    /* selected link */
-    color: #ff5858;
-  }
-  button {
-    /* overwrites browser defaults and resets  the border */
-    border: none;
-    /* takes the font from the outer container */
-    font-family: inherit;
-    /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-    background-color: #00675c;
-    color: #2b2b2b;
-    text-decoration: none;
-    /* adds spacing to the button (this will be discussed later) */
-    padding: 10px;
-    border-radius: 3px;
-    /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-  }
-  button:hover, button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
-  }
-  .button_secondary {
-    background-color: #e0b354;
-    color: #2b2b2b;
-  }
-  .navigation-list__item--active {
-    text-decoration: none;
-  }
-  .profile__portrait {
-    float: left;
-    width: 250px;
-    margin-right: 40px;
-    height: auto;
-    border-radius: 50%;
-  }
-  .page-footer {
-    clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    -ms-flex-direction: column-reverse;
-        flex-direction: column-reverse;
-  }
-  .profile {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .about {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .contact {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  * {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-  .page-header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    padding: 20px;
-  }
-  .page-header__item {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 200px;
-            flex: 0 1 200px;
-  }
-  .page-header__item:last-child {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    text-align: right;
-  }
-  .navigation-list {
-    list-style-type: none;
-  }
-  .navigation-list a {
-    position: relative;
-    padding: 5px;
-  }
-  .navigation-list li {
-    display: inline-block;
-    margin-left: 15px;
-  }
-  /* start grid fallback */
-  .grid__item {
-    display: inline-block;
-    width: 33%;
-  }
-  /* end grid fallback */
-  
-  @supports (display: grid) {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  /* Sets the font size to 16 px */
+  line-height: 1.6;
+  /* Sets the line-height to 1.6 */
+  background-color: var(--background);
+}
+h1{
+  font-size: 30px;
+  font-weight: var(--header-font-weight);
+}
+h2{
+  font-size: 24px;
+  font-weight: var(--header-font-weight);
+}
+h3{
+  font-size: 18px;
+  font-weight: var(--header-font-weight);
+}
+a {
+  color: var(--primary-color);
+}
+a:visited {
+  /* visited link */
+  color: var(--link-visited);
+}
+a:hover, a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+a:active {
+  /* selected link */
+  color: var(--link-active);
+}
+button {
+  /* overwrites browser defaults and resets  the border */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration (underline, etc.) of the button */
+  background-color: var(--button-background);
+  color: var(--button-text);
+  text-decoration: none;
+  /* adds spacing to the button (this will be discussed later) */
+  padding: 10px;
+  border-radius: 3px;
+  /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+button:hover, button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+.button_secondary {
+  background-color: var(--secondary-color);
+  color: var(--button-text);
+}
+.navigation-list__item--active {
+  text-decoration: none;
+}
+.profile__portrait {
+  float: left;
+  width: 250px;
+  margin-right: 40px;
+  height: auto;
+  border-radius: 50%;
+}
+.page-footer {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-direction: column-reverse;
+      flex-direction: column-reverse;
+}
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.about {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contact {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+.page-header__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
+}
+.page-header__item:last-child {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+}
+.navigation-list {
+  list-style-type: none;
+}
+.navigation-list a {
+  position: relative;
+  padding: 5px;
+}
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+/* start grid fallback */
+.grid__item {
+  display: inline-block;
+  width: 33%;
+}
+/* end grid fallback */
+
+@supports (display: grid) {
+.grid {
+  display: -ms-grid;
+  display: grid;
+  /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 0;
+}
+.grid__item {
+  background-color: var(--grid-background);
+  width: auto;
+  min-height: auto;
+  margin: 0;
+}
+.grid__item:last-child {
+  -ms-grid-column: 3;
+  grid-column: 3 / 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+}
+@media all and (max-width: 500px) {
   .grid {
-    display: -ms-grid;
-    display: grid;
-    /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
-    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
-    margin: 0;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
-  .grid__item {
-    background-color: lightgray;
-    width: auto;
-    min-height: auto;
-    margin: 0;
+}
+@media all and (min-width: 500px) and (max-width: 750px){
+  .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media all and (max-width: 750px){
+  /* shared code */
+  .grid {
+    grid-gap: 10px;
   }
   .grid__item:last-child {
-    -ms-grid-column: 3;
-    grid-column: 3 / 3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1 / 3;
+    grid-column: auto / auto;
+    grid-row: auto / auto;
   }
+  h1 {
+    font-size: 22px;
   }
-  @media all and (max-width: 500px) {
-    .grid {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-    }
+}
+.button, button {
+  /* overwrites browser defaults and resets the border */
+  border: none;
+  display: inline-block;
+  /*takes the font from the outer container */
+  font-family: inherit;
+  background-color: var(--button-background);
+  color: var(--button-text);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  /* width of the border, type, color */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.9s opacity;
+  -o-transition: 0.9s opacity;
+  transition: 0.9s opacity;
+}
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  /* reduces the opacity of the button to 80% */
+  opacity: 0.8;
+}
+@-webkit-keyframes color-change {
+  0% {
+    fill: var(--sun-0);
   }
-  @media all and (min-width: 500px) and (max-width: 750px){
-    .grid {
-      -ms-grid-columns: 1fr 20px 1fr;
-      grid-template-columns: 1fr 1fr;
-    }
+  50% {
+    fill: var(--sun-50);
   }
-  @media all and (max-width: 750px){
-    /* shared code */
-    .grid {
-      grid-gap: 10px;
-    }
-    .grid__item:last-child {
-      grid-column: auto / auto;
-      grid-row: auto / auto;
-    }
-    h1 {
-      font-size: 22px;
-    }
+  100% {
+    fill: var(--sun-100);
   }
-  .button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    display: inline-block;
-    /*takes the font from the outer container */
-    font-family: inherit;
-    background-color: #00675c;
-    color: #2b2b2b;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type, color */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition: 0.9s opacity;
-    -o-transition: 0.9s opacity;
-    transition: 0.9s opacity;
+}
+@keyframes color-change {
+  0% {
+    fill: var(--sun-0);
   }
-  button {
-    /* overwrites browser defaults and resets the border */
-    border: none;
-    display: inline-block;
-    /*takes the font from the outer container */
-    font-family: inherit;
-    background-color: #00675c;
-    color: #2b2b2b;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 3px;
-    /* width of the border, type, color */
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
-    -webkit-transition: 0.9s opacity;
-    -o-transition: 0.9s opacity;
-    transition: 0.9s opacity;
+  50% {
+    fill: var(--sun-50);
   }
-  button:hover,
-  button:focus,
-  .button:hover,
-  .button:focus {
-    /* lets the mouse appear as a hand when hovering over the button */
-    cursor: pointer;
-    /* reduces the opacity of the button to 80% */
-    opacity: 0.8;
+  100% {
+    fill: var(--sun-100);
   }
-  @-webkit-keyframes color-change {
-    0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: var(--sun-50);
-    }
-    100% {
-      fill: #f76414;
-    }
+}
+.sun {
+  -webkit-animation: 4s color-change infinite alternate linear;
+          animation: 4s color-change infinite alternate linear;
+}
+@-webkit-keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
-  @keyframes color-change {
-    0% {
-      fill: #edc655;
-    }
-    50% {
-      fill: var(--sun-50);
-    }
-    100% {
-      fill: #f76414;
-    }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
-  .sun {
-    -webkit-animation: 4s color-change infinite alternate linear;
-            animation: 4s color-change infinite alternate linear;
+}
+@keyframes cloud-move {
+  from {
+    -webkit-transform: translate(0, 50px);
+            transform: translate(0, 50px);
   }
-  @-webkit-keyframes cloud-move {
-    from {
-      -webkit-transform: translate(0, 50px);
-              transform: translate(0, 50px);
-    }
-    to {
-      -webkit-transform: translate(200px, 50px);
-              transform: translate(200px, 50px);
-    }
+  to {
+    -webkit-transform: translate(200px, 50px);
+            transform: translate(200px, 50px);
   }
-  @keyframes cloud-move {
-    from {
-      -webkit-transform: translate(0, 50px);
-              transform: translate(0, 50px);
-    }
-    to {
-      -webkit-transform: translate(200px, 50px);
-              transform: translate(200px, 50px);
-    }
+}
+.cloud-front {
+  -webkit-animation-duration: 30s;
+          animation-duration: 30s;
+  -webkit-animation-name: cloud-move;
+          animation-name: cloud-move;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+@-webkit-keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
-  .cloud-front {
-    -webkit-animation-duration: 30s;
-            animation-duration: 30s;
-    -webkit-animation-name: cloud-move;
-            animation-name: cloud-move;
-    -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
-  @-webkit-keyframes cloud-move-reverse {
-    from {
-      -webkit-transform: translate(446px, 48px);
-              transform: translate(446px, 48px);
-    }
-    to {
-      -webkit-transform: translate(100px, 48px);
-              transform: translate(100px, 48px);
-    }
+}
+@keyframes cloud-move-reverse {
+  from {
+    -webkit-transform: translate(446px, 48px);
+            transform: translate(446px, 48px);
   }
-  @keyframes cloud-move-reverse {
-    from {
-      -webkit-transform: translate(446px, 48px);
-              transform: translate(446px, 48px);
-    }
-    to {
-      -webkit-transform: translate(100px, 48px);
-              transform: translate(100px, 48px);
-    }
+  to {
+    -webkit-transform: translate(100px, 48px);
+            transform: translate(100px, 48px);
   }
-  .cloud-back {
-    -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
-            animation: 34s cloud-move-reverse infinite alternate linear;
-  }
-  ul.borderYtoX a:before {
-    position:absolute;
-    opacity: 0.5;
-    height: 100%;
-    width: 2px;
-    content: '';
-    background: rgb(2, 0, 0);
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  ul.borderYtoX a:after {
-    position:absolute;
-    opacity: 0.5;
-    height: 100%;
-    width: 2px;
-    content: '';
-    background: rgb(2, 0, 0);
-    -webkit-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
-  }
-  ul.borderYtoX a:before {
-    left: 0px;
-    top: 0px;
-  }
-  ul.borderYtoX a:after {
-    right: 0px;
-    bottom: 0px;
-  }
-  ul.borderYtoX a:hover:before, ul.borderYtoX a:hover:after {
-    opacity: 1;
-    height: 2px;
-    width: 100%;
-  }
+}
+.cloud-back {
+  -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
+          animation: 34s cloud-move-reverse infinite alternate linear;
+}
+ul.borderYtoX a:before, ul.borderYtoX a:after {
+  position:absolute;
+  opacity: 0.5;
+  height: 100%;
+  width: 2px;
+  content: '';
+  background: var(--nav-animation-color);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.borderYtoX a:before {
+  left: 0px;
+  top: 0px;
+}
+ul.borderYtoX a:after {
+  right: 0px;
+  bottom: 0px;
+}
+ul.borderYtoX a:hover:before, ul.borderYtoX a:hover:after {
+  opacity: 1;
+  height: 2px;
+  width: 100%;
+}
