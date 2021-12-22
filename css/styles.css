@@ -3,7 +3,7 @@ Colors used
 
 Background color (Gold): #FFD700;
 text color (Black): #000;
-Primary color (Green): #00675c;
+Primary color (Green): #769892;
 Secondary color (Orange): #e0b354;
 */
 :root {
@@ -12,7 +12,7 @@ Secondary color (Orange): #e0b354;
   --background: #ffd700;
   --link-visited: purple;
   --link-active: #ff5858;
-  --button-background: #00675c;
+  --button-background: #769892;
   --button-text: #2b2b2b;
   --grid-background: lightgray;
   --sun-0: #fcffad;
